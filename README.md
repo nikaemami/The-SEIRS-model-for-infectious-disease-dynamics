@@ -82,10 +82,12 @@ Finding the day in which the number of infected people is maximum, using the **N
 def NEW_RAPH (t):
     fx=Pn_prime.evalf(subs={x:t})
     return fx
+    
 def NEW_RAPH_derivative (t):
     df1=Pn_prime.diff(x)
     df=df1.evalf(subs={x:t})
     return df
+    
 while True:
     FXn=NEW_RAPH(Xn)
     fXn=NEW_RAPH_derivative(Xn)
