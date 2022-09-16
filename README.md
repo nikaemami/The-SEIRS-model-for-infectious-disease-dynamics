@@ -38,31 +38,11 @@ def f(xi,yi,**par):
 
 By using the **Runge-Kutta** method, and implementing the coefficients k1, k2, k3, and k4 in the code, the final model can be implemented as below:
 
-```ruby
-def yi1(xi,yi,**par):
-    h = par["h"]
-    yi1_ = [yi_ + (h/6) * (k1_+2*k2_+2*k3_+k4_)
-            for yi_,k1_,k2_,k3_,k4_ in zip(yi,k1(xi,yi,**par),k2(xi,yi,**par),
-            k3(xi,yi,**par),k4(xi,yi,**par))
-            ]
-    return yi1_
-```
-
 The results:
 
 ![My Image](3.png)
 
 Using the **Simpson's rule** to find the percentage of the infected people in the total of 5 years:
-
-```ruby
-def yi1(xi,yi,**par):
-    h = par["h"]
-    yi1_ = [yi_ + (h/6) * (k1_+2*k2_+2*k3_+k4_)
-            for yi_,k1_,k2_,k3_,k4_ in zip(yi,k1(xi,yi,**par),k2(xi,yi,**par),
-            k3(xi,yi,**par),k4(xi,yi,**par))
-            ]
-    return yi1_
-```
 
 The results is as follows:
   
