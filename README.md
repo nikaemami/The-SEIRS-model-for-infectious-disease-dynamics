@@ -5,13 +5,13 @@ The simplest model for the spread of an infection is the SIR model, which tracks
 
 The SEIRS model has 4 groups: usceptible(S), infectious(I), recovered(R), and exposed(E). The graph below demonstrates the change of population in the mentioned groups:
 
-![My Image](images/1.png)
+![My Image](1.png)
 
 According to the above graph, we assume that the total population size N is constant. All groups will experience death at a rate µ, and birth at a rate s. The life expectency in this population is 76 years, so 1/µ = 76. β% of the people are in contact with each other everyday. Upon being infected, individuals will move to the E group at a rate βSI/N. We assume that the contact rate in this population is 21%, so β=0.21/day. People remain in the E for an average period of 1/σ before moving into the I group. We assume that σ = 7 days. The recovery time for this disease is 14 days, and no one dies from this disease (only background deaths from other causes). Immunity after recovery is temporary and recovered individuals will lose immunity and return to S after an average protected period of 1/ω. We assume that 1/ω = 365 days. 
 
 All of the rates mentioned above will lead to the system of differential equations below:
 
-![My Image](images/2.png)
+![My Image](2.png)
 
 We assume that in the begginig, only 0.1% of the population are exposed to this disease, and we want to examine the population of each of the groups after 5 years.
 
@@ -50,7 +50,7 @@ def yi1(xi,yi,**par):
 
 The results:
 
-![My Image](images/3.png)
+![My Image](3.png)
 
 Using the **Simpson's rule** to find the percentage of the infected people in the total of 5 years:
 
